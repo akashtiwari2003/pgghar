@@ -26,12 +26,12 @@ public class Users {
     private String phone;
 
     @Column(name = "user_type")
-    private Type type;
+    private String type;
 
     public Users() {
     }
 
-    public Users(int user_id, String name, String password, String email, String phone, Type type) {
+    public Users(int user_id, String name, String password, String email, String phone, String type) {
         this.user_id = user_id;
         this.name = name;
         this.password = password;
@@ -80,11 +80,11 @@ public class Users {
         this.phone = phone;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

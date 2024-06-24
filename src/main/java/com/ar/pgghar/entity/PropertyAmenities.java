@@ -7,22 +7,11 @@ import jakarta.persistence.*;
 @Table(name = "property_amenities")
 public class PropertyAmenities {
     @Id
-    @Column(name="ocupancy_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int occupancyId;
-
     @Column(name="property_id")
     private int propertyId;
 
-    @Column(name="occupancy_type")
-    private OccupancyType occupancyType;
+    @Id
+    @Column(name="amenity_id")
+    private int amenityId;
 
-    @Column(name="price")
-    private double price;
-
-    @Column(name="total_capacity")
-    private int totalCapacity;
-
-    @Column(name="available_capacity")
-    private int availableCapacity;
 }
