@@ -19,4 +19,8 @@ public class UsersController {
     public List<Users> getAllUsers(){
      return usersService.findAll();
     }
+
+    @GetMapping("/login"){
+
+    }
 }

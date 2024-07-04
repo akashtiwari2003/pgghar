@@ -1,24 +1,21 @@
 package com.ar.pgghar.entity;
 
-import com.ar.pgghar.enums.OccupancyType;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Id;
 
-@Entity
-@Table(name = "property_amenities")
-@IdClass(PropertyAmenitiesCompositeKey.class)
-public class PropertyAmenities {
-    @Id
+@Embeddable
+public class PropertyAmenitiesCompositeKey {
     @Column(name="property_id")
     private int propertyId;
 
-    @Id
     @Column(name="amenity_id")
     private int amenityId;
 
-    public PropertyAmenities() {
+    public PropertyAmenitiesCompositeKey() {
     }
 
-    public PropertyAmenities(int propertyId, int amenityId) {
+    public PropertyAmenitiesCompositeKey(int propertyId, int amenityId) {
         this.propertyId = propertyId;
         this.amenityId = amenityId;
     }

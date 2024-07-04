@@ -1,8 +1,6 @@
 package com.ar.pgghar.entity;
 
-import com.ar.pgghar.enums.Type;
 import jakarta.persistence.*;
-import org.hibernate.annotations.CollectionIdMutability;
 
 @Entity
 @Table(name = "users")
@@ -11,7 +9,7 @@ public class Users {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int user_id;
+    private int userId;
 
     @Column(name = "name")
     private String name;
@@ -32,7 +30,7 @@ public class Users {
     }
 
     public Users(int user_id, String name, String password, String email, String phone, String type) {
-        this.user_id = user_id;
+        this.userId = user_id;
         this.name = name;
         this.password = password;
         this.email = email;
@@ -40,12 +38,12 @@ public class Users {
         this.type = type;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getName() {
